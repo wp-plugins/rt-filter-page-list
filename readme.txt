@@ -20,15 +20,15 @@ By removing unneeded HTML elements server-side, page size is reduced, and client
 This is especially true for older browsers, and sites with a large number of published pages.
 
 This plugin is intended to be used with the "pages" widget that comes with WordPress, or any navigation element that uses
-`wp_list_pages`.
+wp_list_pages.
 
 There are two ways the plugin can apply the filter.
 
 1. By modifying the default Pages widget that comes with WordPress
 1. By applying the filter everywhere wp_list_pages is used
 
-Please note that since the second option uses the `wp_list_pages` hook, the filtering will take place anywhere
-`wp_list_pages` is used. This includes menu locations to which no custom menu is assigned. Please make sure all your\
+Please note that since the second option uses the wp_list_pages hook, the filtering will take place anywhere
+wp_list_pages is used. This includes menu locations to which no custom menu is assigned. Please make sure all your
 menu locations have a custom menu assigned to them to avoid unexpected behavior.
 
 This plugin requires the PHP DOMDocument extension, and PHP5.
@@ -51,7 +51,7 @@ the page list anywhere wp_list_pages is called. This could lead to unexpected be
 this happens on your site, you can either opt to use the Pages widget, select 'None'.
 
 Selecting 'None' disables the plugin's automatic filters, but still allows you to call the
-`RT_Filter_Page_List::filter_html` function directly to apply filtering in your code.
+RT_Filter_Page_List::filter_html function directly to apply filtering in your code.
 
 `
 $html = wp_list_pages( $args );
