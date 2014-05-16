@@ -3,7 +3,7 @@
  * Plugin Name: RT Filter Page List
  * Plugin URI: http://www.roytanck.com
  * Description: Filters the output of wp_list_pages, so that pages that are usually hidden through CSS are stripped from the DOM. This helps performance on sites with many pages. Requires DOMDocument.
- * Version: 0.9
+ * Version: 0.9.1
  * Author: Roy Tanck
  * Author URI: http://www.roytanck.com
  * Text Domain: rt-filter-page-list
