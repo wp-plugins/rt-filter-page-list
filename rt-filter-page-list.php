@@ -49,7 +49,10 @@ if( !class_exists('RT_Filter_Page_List') ){
 				// get the options
 				$options = get_option( 'rt_filter_page_list_option' );
 
-				switch( $options['filtertype'] ){
+				// get the filter type, apply default if needed
+				$filtertype = in_array( $options['filtertype'], array( 'widget', 'global', 'none' ) ) ? $options['filtertype'] : 'widget';
+
+				switch( $filtertype ){
 
 					case 'widget':
 						// register the widget with WordPress
