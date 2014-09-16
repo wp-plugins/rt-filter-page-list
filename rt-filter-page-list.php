@@ -78,9 +78,7 @@ if( !class_exists('RT_Filter_Page_List') ){
 		 * Function to load the text domain
 		 */
 		function load_textdomain() {
-			$foo = load_plugin_textdomain( 'rt-filter-page-list', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' ); 
-			echo dirname( plugin_basename( __FILE__ ) ) . '/languages/';
-			var_dump($foo);
+			load_plugin_textdomain( 'rt-filter-page-list', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' ); 
 		}
 
 
