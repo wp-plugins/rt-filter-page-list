@@ -4,7 +4,7 @@ Donate link: http://www.roytanck.com/
 Tags: pages, widget, filter, folding, accordion, menu
 Requires at least: 3.5.2
 Tested up to: 4.3
-Stable tag: 0.9.2
+Stable tag: 0.9.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -80,6 +80,9 @@ Ideally, your theme should take care of this.
 2. Child pages of non-ancestor pages are filtered from the page list
 
 == Changelog ==
+
+= 0.9.3 =
+* Added support for WordPress 4.3's more accessible heading structure
 
 = 0.9.2 =
 * Added Spanish translation (thanks to [Andrew Kurtis](http://www.webhostinghub.com/))

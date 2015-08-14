@@ -56,27 +56,35 @@ class RTFilterPageListSettingsPage {
 	 */
 	public function create_admin_page()
 	{
+		global $wp_version;
 		$this->options = get_option( 'rt_filter_page_list_option' );
-		?>
-		<div class="wrap">
-			<?php screen_icon(); ?>
-			<h2>RT Filter Page List</h2>           
-			<form method="post" action="options.php">
-			<?php
-				settings_fields( 'rt_filter_page_list_option_group' );   
-				do_settings_sections( 'rt-filter-page-list-options' );
-				submit_button();
-			?>
-			</form>
-		</div>
-		<?php
+		// start output
+		echo '<div class="wrap">';
+		// add a screen icon for older, still supported WP versions
+		if( version_compare( $wp_version, '3.8', '<' ) ){
+			screen_icon();
+		}
+		// check the WP version to output the right type of main page heading
+		if( version_compare( $wp_version, '4.3', '>=' ) ){
+			echo '<h1>RT Filter Page List</h1>';
+		} else {
+			echo '<h2>RT Filter Page List</h2>';
+		}
+		// render the form
+		echo '<form method="post" action="options.php">';
+		settings_fields( 'rt_filter_page_list_option_group' );   
+		do_settings_sections( 'rt-filter-page-list-options' );
+		submit_button();
+		echo '</form>';
+		// wrap up
+		echo '</div>';
 	}
 
 	/**
 	 * Register and add settings
 	 */
 	public function page_init()
-	{        
+	{
 		register_setting(
 			'rt_filter_page_list_option_group', // Option group
 			'rt_filter_page_list_option', // Option name
